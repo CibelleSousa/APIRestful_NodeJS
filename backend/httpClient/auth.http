@@ -1,0 +1,36 @@
+@url = http://localhost:3333/v1
+
+POST {{url}}/auth
+Content-Type: application/json
+
+{
+ "email": "serra.henrique2@gmail.com", 
+ "password": "batatinha1234"
+}
+
+###
+
+GET {{url}}/auth/check
+Content-Type: application/json
+
+{
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3NDcxODY1OTcsImV4cCI6MTc0NzQ0NTc5Nywic3ViIjoiMSJ9.uqtje-RcQWBC-MNSU_vMBMrW2nnMvQTJVmVHflqBwkE"
+}
+###
+
+POST {{url}}/forgot-password
+Content-Type: application/json
+
+{
+ "email": "serra.henrique3@gmail.com"
+}
+###
+
+
+POST {{url}}/reset-password
+Content-Type: application/json
+
+{
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE3NDcxODY1OTcsImV4cCI6MTc0NzQ0NTc5Nywic3ViIjoiMSJ9.uqtje-RcQWBC-MNSU_vMBMrW2nnMvQTJVmVHflqBwkE",
+    "password": "batatinha123"
+}
